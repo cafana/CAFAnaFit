@@ -1,0 +1,83 @@
+FILE=TABLE
+PRODUCT=cafanafit
+VERSION=vXX.YY
+
+FLAVOR=ANY
+QUALIFIERS = "debug:e17"
+
+ACTION=SETUP
+  setupEnv()
+  proddir()
+
+  # for get-directory-name
+  setupRequired(cetpkgsupport)
+  setupRequired(cafanacore v01.09 -qe17:debug)
+  setupRequired(osclib v00.07 -qe17:debug:stan)
+
+  EnvSet(CAFANAFIT_VERSION, ${UPS_PROD_VERSION} )
+  EnvSet(CAFANAFIT_INC, ${UPS_PROD_DIR}/include )
+  EnvSet(CAFANAFIT_FQ_DIR, ${CAFANAFIT_DIR}`get-directory-name subdir`.`echo ${UPS_PROD_QUALIFIERS} | tr ':' '.'` )
+  EnvSet(CAFANAFIT_LIB, ${CAFANAFIT_FQ_DIR}/lib )
+  pathPrepend(LD_LIBRARY_PATH, ${CAFANAFIT_LIB})
+
+
+FLAVOR=ANY
+QUALIFIERS = "prof:e17"
+
+ACTION=SETUP
+  setupEnv()
+  proddir()
+
+  # for get-directory-name
+  setupRequired(cetpkgsupport)
+  setupRequired(cafanacore v01.09 -qe17:prof)
+  setupRequired(osclib v00.07 -qe17:prof:stan)
+
+  EnvSet(CAFANAFIT_VERSION, ${UPS_PROD_VERSION} )
+  EnvSet(CAFANAFIT_INC, ${UPS_PROD_DIR}/include )
+  EnvSet(CAFANAFIT_FQ_DIR, ${CAFANAFIT_DIR}`get-directory-name subdir`.`echo ${UPS_PROD_QUALIFIERS} | tr ':' '.'` )
+  EnvSet(CAFANAFIT_LIB, ${CAFANAFIT_FQ_DIR}/lib )
+  pathPrepend(LD_LIBRARY_PATH, ${CAFANAFIT_LIB})
+
+
+
+
+
+
+
+FLAVOR=ANY
+QUALIFIERS = "debug:e19"
+
+ACTION=SETUP
+  setupEnv()
+  proddir()
+
+  # for get-directory-name
+  setupRequired(cetpkgsupport)
+  setupRequired(cafanacore v01.09 -qe19:debug)
+  setupRequired(osclib v00.07 -qe19:debug:stan)
+
+  EnvSet(CAFANAFIT_VERSION, ${UPS_PROD_VERSION} )
+  EnvSet(CAFANAFIT_INC, ${UPS_PROD_DIR}/include )
+  EnvSet(CAFANAFIT_FQ_DIR, ${CAFANAFIT_DIR}`get-directory-name subdir`.`echo ${UPS_PROD_QUALIFIERS} | tr ':' '.'` )
+  EnvSet(CAFANAFIT_LIB, ${CAFANAFIT_FQ_DIR}/lib )
+  pathPrepend(LD_LIBRARY_PATH, ${CAFANAFIT_LIB})
+
+
+FLAVOR=ANY
+QUALIFIERS = "prof:e19"
+
+ACTION=SETUP
+  setupEnv()
+  proddir()
+
+  # for get-directory-name
+  setupRequired(cetpkgsupport)
+  setupRequired(cafanacore v01.09 -qe19:prof)
+  setupRequired(osclib v00.07 -qe19:prof:stan)
+
+  EnvSet(CAFANAFIT_VERSION, ${UPS_PROD_VERSION} )
+  EnvSet(CAFANAFIT_INC, ${UPS_PROD_DIR}/include )
+  EnvSet(CAFANAFIT_FQ_DIR, ${CAFANAFIT_DIR}`get-directory-name subdir`.`echo ${UPS_PROD_QUALIFIERS} | tr ':' '.'` )
+  EnvSet(CAFANAFIT_LIB, ${CAFANAFIT_FQ_DIR}/lib )
+  pathPrepend(LD_LIBRARY_PATH, ${CAFANAFIT_LIB})
