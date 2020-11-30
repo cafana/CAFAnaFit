@@ -1,9 +1,0 @@
-FILE = version
-PRODUCT = cafanafit
-VERSION = vXX.YY
-
-FLAVOR = Linux64bit+2.6-2.12
-QUALIFIERS = "debug:e17"
-  PROD_DIR = cafanafit/vXX.YY/
-  UPS_DIR = ups
-  TABLE_FILE = cafanafit.table
